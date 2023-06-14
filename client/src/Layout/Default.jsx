@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Default.css"
-import { Navigate, Outlet, json } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import Header from '../Components/Header/Header'
 
 const Default = () => {

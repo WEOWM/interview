@@ -15,7 +15,7 @@ const Header = () => {
 
   useEffect(() => {
 
-    dispatch(fetchUserDetails({ userID: UserData.userID }))
+    dispatch(fetchUserDetails({ userID: UserData?.userID }))
 
   }, [])
 
@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="welcome-head" style={{ fontSize: ".8rem" }}>
-        <p className="m-0 p-0 fw-bold">Hi, {UserDetails.name}</p>
+        <p className="m-0 p-0 fw-bold">Hi, {UserDetails?.name}</p>
         <CustomButton
           handleSubmit={handleLogOut}
           width="6%"
