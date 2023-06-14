@@ -2,7 +2,7 @@ import axios from "axios";
 
 const ActionHandle = (payload) => {
   return new Promise((resolve, reject) => {
-    payload.baseURL = "http://localhost:5000/auth";
+    payload.baseURL = "https://interview-2nyw.onrender.com/auth";
     axios(payload)
       .then((response) => {
         if (response.status >= 200 && response.status < 300) {
