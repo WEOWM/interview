@@ -1,0 +1,117 @@
+.align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.align2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inp-head {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.login {
+    /* width: 500px; */
+    background-color: #fff;
+    height: 500px !important;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.101);
+    border-radius: 10px;
+    border: solid 1px rgba(128, 128, 128, 0.093);
+}
+
+
+.semicircle-login {
+    width: 1000px;
+    height: 900px;
+    background: linear-gradient(69deg, rgba(64, 254, 255, 1) 0%, rgba(7, 94, 204, 1) 100%);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-top: 30rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.semicircle-login a {
+    color: #fff !important;
+    font-size: .8rem;
+    margin-bottom: 63rem;
+    margin-left: 27rem;
+}
+
+
+
+.semicircle-body-login {
+    width: 100%;
+    height: 324px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:3rem ;
+    padding-bottom:3rem ;
+}
+
+.forgot-pass-mob{
+    color: rgba(0, 0, 0, 0.581);
+    font-size: .8rem;
+}
+
+
+
+
+.login {
+    position: relative;
+    top: 8rem;
+}
+
+
+input:active,
+input:focus,
+input:hover,
+input:visited,
+input.active,
+input.focus,
+input.hover,
+input.visited,
+button:active,
+button:focus,
+button:hover,
+button:visited,
+button.active,
+button.focus,
+button.hover,
+button.visited {
+    box-shadow: unset !important;
+    outline: 0 !important;
+}
+
+
+@media only screen and (max-width:992px) {
+    .btnWidth {
+        width: 20% !important;
+    }
+
+    .semicircle-login{
+        display: none;
+    }
+
+
+}
+@media only screen and (min-width:992px) {
+    .forgot-pass-mob{
+        display: none;
+    }
+
+
+}

@@ -1,0 +1,10 @@
+.custom-btn{
+    background: linear-gradient(69deg, rgba(64,238,255,1) 0%, rgba(0,74,128,1) 94%);
+    border-radius: 10px;
+    width: 5%;
+    height: 1.8rem;
+    outline: unset;
+    border: unset;
+    color: #fff;
+
+}

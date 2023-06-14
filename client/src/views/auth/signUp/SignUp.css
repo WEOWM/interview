@@ -1,0 +1,95 @@
+.align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.align2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-body {
+  overflow-y: hidden !important;
+}
+
+.inp-head {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sign-up-body {
+  width: 100%;
+  height: 100vh;
+}
+
+.sign-up {
+  /* width: 500px; */
+  background-color: #fff;
+  height: 500px !important;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.101);
+  border-radius: 10px;
+  border: solid 1px rgba(128, 128, 128, 0.093);
+}
+
+.sign-up {
+  position: relative;
+  top: 8rem;
+}
+
+.semicircle {
+  width: 1300px;
+  height: 1100px;
+  background: linear-gradient(
+    69deg,
+    rgba(64, 254, 255, 1) 0%,
+    rgba(7, 94, 204, 1) 100%
+  );
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  margin-top: 40rem;
+}
+
+.semicircle-body {
+  width: 100%;
+  height: 268px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:active,
+input:focus,
+input:hover,
+input:visited,
+input.active,
+input.focus,
+input.hover,
+input.visited,
+button:active,
+button:focus,
+button:hover,
+button:visited,
+button.active,
+button.focus,
+button.hover,
+button.visited {
+  box-shadow: unset !important;
+  outline: 0 !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .btnWidth {
+    width: 20% !important;
+  }
+  .semicircle {
+    display: none;
+  }
+}

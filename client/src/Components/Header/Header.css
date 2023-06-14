@@ -1,0 +1,19 @@
+.header{
+    width: 100%;
+    height: 5rem;
+    background-color: unset;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.welcome-head{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}

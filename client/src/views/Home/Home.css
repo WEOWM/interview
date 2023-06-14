@@ -1,0 +1,44 @@
+@media only screen and (min-width:992px) {
+    .responsive-card {
+        width: 50%;
+        height: 38vh !important;
+        overflow-y: scroll !important;
+    }
+
+    .responsive-card::-webkit-scrollbar {
+        width: 5px;
+    } 
+    .responsive-card::-webkit-scrollbar-track {
+        background-color: unset;
+        border-radius: 10px;
+    } 
+    .responsive-card::-webkit-scrollbar-thumb {
+        background: #73beff31;
+        border-radius: 10px;
+    } 
+    .responsive-card::-webkit-scrollbar-thumb:hover {
+        background: #73beff62;
+    } 
+}
+
+
+/* ::-webkit-scrollbar {
+    width: 7px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    background-color: red;
+    border-radius: 10px;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #111;
+} */
