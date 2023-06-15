@@ -9,22 +9,25 @@ import { Col, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { fetchSignUp } from "../../../store/slice/authSlice/SignUp/SignupSlice";
 
-const SignUp = () => {
-  //   const [mount, setMount] = useState(true);
-  //   const [hide, setHide] = useState("password");
+import {AiOutlineEye} from "react-icons/ai"
+import {AiOutlineEyeInvisible} from "react-icons/ai"
 
-  //   const showToggle = () => {
-  //     if (hide === "password") {
-  //       setHide("text");
-  //       setMount(false);
-  //     }
-  //   };
-  //   const hideToggle = () => {
-  //     if (hide === "text") {
-  //       setHide("password");
-  //       setMount(true);
-  //     }
-  //   };
+const SignUp = () => {
+    const [mount, setMount] = useState(true);
+    const [hide, setHide] = useState("password");
+
+    const showToggle = () => {
+      if (hide === "password") {
+        setHide("text");
+        setMount(false);
+      }
+    };
+    const hideToggle = () => {
+      if (hide === "text") {
+        setHide("password");
+        setMount(true);
+      }
+    };
 
   const [name, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -79,13 +82,14 @@ const SignUp = () => {
       title: "Choose Password",
       placeholder: "Choose Password",
       value: password,
+      type:hide,
       handleInputChange1: handleInputChange4,
     },
   ];
 
   return (
-    <div className="sign-up-body">
-      <div className="inp-head" style={{ fontSize: ".8rem" }}>
+    <div className="sign-up-body ">
+      <div className="inp-head " style={{ fontSize: ".8rem" }}>
         <p className="m-0 p-0">Already have an account?</p>
         <CustomButton
           handleSubmit={handleSignUp}
@@ -116,9 +120,15 @@ const SignUp = () => {
                   onChange={item.handleInputChange1}
                   handleSubmit={handleSubmit}
                   title={item.title}
+                  type={item.type}
                 />
               );
             })}
+             {
+              !mount ?
+                <AiOutlineEye  onClick={()=>hideToggle()} style={{  cursor:"pointer",position: "absolute", top: "18rem", right: "3rem" }} /> :
+                <AiOutlineEyeInvisible onClick={()=>showToggle()} style={{  cursor:"pointer",position: "absolute", top: "18rem", right: "3rem" }} />
+            }
             <div style={{ marginTop: "2rem" }} >
               <CustomButton
                 handleSubmit={handleSubmit}

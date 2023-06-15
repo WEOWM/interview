@@ -5,25 +5,28 @@ import CustomInput from "../../../Components/custom/customInput/CustomInput";
 import CustomButton from "../../../Components/custom/customButton/CustomButton";
 import { useNavigate } from "react-router-dom";
 import { Col, Row } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { clearSignInState, fetchSignIn } from "../../../store/slice/authSlice/SignIn/SignInSlice";
+import { useDispatch, } from "react-redux";
+import {  fetchSignIn } from "../../../store/slice/authSlice/SignIn/SignInSlice";
+
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 
 const Login = () => {
-  //   const [mount, setMount] = useState(true);
-  //   const [hide, setHide] = useState("password");
+  const [mount, setMount] = useState(true);
+  const [hide, setHide] = useState("password");
 
-  //   const showToggle = () => {
-  //     if (hide === "password") {
-  //       setHide("text");
-  //       setMount(false);
-  //     }
-  //   };
-  //   const hideToggle = () => {
-  //     if (hide === "text") {
-  //       setHide("password");
-  //       setMount(true);
-  //     }
-  //   };
+  const showToggle = () => {
+    if (hide === "password") {
+      setHide("text");
+      setMount(false);
+    }
+
+  };
+  const hideToggle = () => {
+    if (hide === "text") {
+      setHide("password");
+      setMount(true);
+    }
+  };
 
   const dispatch = useDispatch();
 
@@ -63,12 +66,15 @@ const Login = () => {
       title: "Email",
       placeholder: "Email",
       value: email,
+      
       handleInputChange1: handleInputChange,
     },
     {
       title: "Password",
       placeholder: "Password",
       value: password,
+      type:hide,
+      backgroundColor:'red',
       handleInputChange1: handleInputChange2,
     },
   ];
@@ -76,7 +82,7 @@ const Login = () => {
   return (
     <div className="sign-up-body">
 
-      <div className="inp-head" style={{ fontSize: ".8rem" }}>
+      <div className="login-inp-head" style={{ fontSize: ".8rem" }}>
         <p className="m-0 p-0">don't have an account?</p>
         <CustomButton
           handleSubmit={handleSignUp}
@@ -108,9 +114,18 @@ const Login = () => {
                   value={item.value}
                   onChange={item.handleInputChange1}
                   title={item.title}
+                  type={item.type}
+                  // backgroundColor={item.backgroundColor}
+
                 />
               );
             })}
+            {
+              !mount ?
+                <AiOutlineEye  onClick={()=>hideToggle()} style={{  cursor:"pointer",position: "absolute", top: "13.8rem", right: "4rem" }} /> :
+                <AiOutlineEyeInvisible onClick={()=>showToggle()} style={{  cursor:"pointer",position: "absolute", top: "13.8rem", right: "4rem" }} />
+            }
+
             <div style={{ marginTop: "2rem" }}>
               <CustomButton
                 handleSubmit={handleLogin}
